@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 8px 32px;
+  margin-top: 8px;
 }
 
 .item__delete {
