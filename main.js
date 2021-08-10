@@ -27,22 +27,31 @@ function onAdd(){
     input.focus();
 }
 
-
+let id = 0;
 function creatItem (text){
-
     const itemRow = document.createElement('li');
     itemRow.setAttribute('class','item__row');
+    itemRow.setAttribute('data-id', id)
 
     itemRow.innerHTML = ` 
         <div class="item">
             <span class="item__name">${text}</span>
             <button class="item__delete">
-                <i class="far fa-check-square"></i>
+                <i data-id=${id} class="far fa-check-square"></i>
             </button>
         </div>
         <div class="item__divider"></div>
   `;
-
+id++;
   return itemRow;
-    
 }
+
+items.addEventListener('click',(event)=>{
+    const id = event.target.dataset.id;
+
+    if(id){
+        const toBeDeleted = document.querySelector(`.item__row[data-id="${id}"]`)
+        toBeDeleted.remove();
+    }
+})
+
