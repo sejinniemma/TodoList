@@ -55,6 +55,10 @@ body {
   cursor: pointer;
 }
 
+.reset:hover {
+  color: #ff8080;
+}
+
 .items {
   height: 500px;
   overflow-y: auto;

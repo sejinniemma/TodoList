@@ -49,7 +49,6 @@ id++;
 
 items.addEventListener('click',(event)=>{
     const id = event.target.dataset.id;
-
     if(id){
         const toBeDeleted = document.querySelector(`.item__row[data-id="${id}"]`)
         toBeDeleted.remove();
