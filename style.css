@@ -48,6 +48,13 @@ body {
   color: white;
 }
 
+.reset {
+  position: relative;
+  right: -100px;
+  font-size: small;
+  cursor: pointer;
+}
+
 .items {
   height: 500px;
   overflow-y: auto;

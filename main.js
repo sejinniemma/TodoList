@@ -3,6 +3,7 @@
 const items = document.querySelector('.items');
 const addBtn = document.querySelector('.footer__button');
 const input = document.querySelector('.footer__input');
+const resetBtn = document.querySelector('.reset');
 
 addBtn.addEventListener('click',()=>{
     onAdd();
@@ -55,3 +56,6 @@ items.addEventListener('click',(event)=>{
     }
 })
 
+resetBtn.addEventListener('click',()=>{
+    items.innerHTML = '';
+})
