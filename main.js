@@ -4,16 +4,22 @@ const items = document.querySelector('.items')
 const addBtn = document.querySelector('.footer__button')
 const input = document.querySelector('.footer__input')
 const resetBtn = document.querySelector('.reset')
+const form = document.querySelector('.new-form')
 
-addBtn.addEventListener('click', () => {
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
   onAdd()
 })
 
-input.addEventListener('keydown', (event) => {
-  if (event.keyCode === 13) {
-    onAdd()
-  }
-})
+// addBtn.addEventListener('click', () => {
+//   onAdd()
+// })
+
+// input.addEventListener('keydown', (event) => {
+//   if (event.keyCode === 13) {
+//     onAdd()
+//   }
+// })
 
 function onAdd() {
   const text = input.value
